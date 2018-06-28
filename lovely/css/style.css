@@ -1,0 +1,129 @@
+	/* 清除默认样式 */
+	*{
+		margin:0;
+		padding: 0;
+	}
+	/* 天空背景 */
+	.sky{
+		position: absolute;
+		top: 0;
+		bottom: 40%;
+		left: 0;
+		width:100%;
+		background: linear-gradient( rgb(196,288,253) 40%,transparent 80%)
+	}
+	/* 绿地背景 */
+	.glass{
+		position: absolute;
+		top: 60%;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: linear-gradient(to top,rgb(148,190,89) 50%,transparent 90%)
+	}
+	.glass img{
+		display: block;
+		position: absolute;
+		bottom: 50px;
+		right: 200px;
+		width: 200px;
+		height: 200px;
+	}
+	/* 绘制白云 */
+	.cloud{
+		float: left;
+		display: inline-block;
+		width: 200px;
+		height: 60px;
+		background-color: #fff;
+		border-radius: 60px;
+		position: relative;
+	}
+	.cloud:before{
+		content: "";
+		position: absolute;
+		background-color: #fff;
+		width: 100px;height: 80px;
+		top: -15px;left: 10px;
+		border-radius: 40px;
+		transform: rotate(30deg);
+	}
+	.cloud:after{
+		content: "";
+		position: absolute;
+		background-color: #fff;
+		width: 120px;height: 120px;
+		top: -55px;left: auto; right: 15px;
+		border-radius: 100px;
+		transform: rotate(30deg);
+	}
+	.word{
+		width: 200px;
+		height: 90px;
+		border: 2px solid red;
+		position: absolute;
+		left: 20%;
+		z-index: 520;
+		border-radius: 50px 230px 51px 50px/50px 174px 54px 50px;
+		text-align: center;
+		font-size: 15px;
+		line-height: 90px;
+
+	}
+	/* 对每个白云缩放和定位 */
+	/* .x1{
+		transform: scale(0.5) translate(300%,20%);
+	}
+	.x2{
+		transform: scale(0.3) translate(300%,600%);
+	}
+	.x3{
+		transform: scale(0.7) translate(120%,150%);
+	}
+	.x4{
+		transform: scale(0.5) translate(150%,300%);
+	}
+	.x5{
+		transform: scale(0.4) translate(100%,100%);
+	} */
+	.x1{
+		transform: scale(0.5) translate(300%,20%);
+		animation: move1 8s linear infinite;
+	}
+	.x2{
+		transform: scale(0.3) translate(300%,600%);
+		animation: move2 9s linear infinite;
+	}
+	.x3{
+		transform: scale(0.7) translate(120%,150%);
+		animation: move3 10s linear infinite;
+	}
+	.x4{
+		transform: scale(0.5) translate(150%,300%);
+		animation: move4 11s linear infinite;
+	}
+	.x5{
+		transform: scale(0.4) translate(100%,100%);
+		animation: move5 9s linear infinite;
+	}
+	@keyframes move1{
+		0%{transform:scale(0.5) translate(2000px,0px);opacity: 0.9}
+		100% {transform:scale(0.5) translate(-2000px,0px);opacity: 0.2}
+	}
+	@keyframes move2{
+		0%{transform: scale(0.6) translate(2000px,600%);opacity: 0.9}
+		100% {transform:scale(0.6) translate(-2000px,600%);opacity: 0.2}
+		
+	}
+	@keyframes move3{
+		0%{transform:scale(0.7) translate(2000px,200px);opacity: 0.9}
+		100% {transform:scale(0.7) translate(-2000px,200px);opacity: 0.2}
+	}
+	@keyframes move4{
+		0%{transform:scale(0.5) translate(2000px,300px);opacity: 0.9}
+		100% {transform:scale(0.5) translate(-2000px,300px);opacity:0.2}
+	}
+	@keyframes move5{
+		0%{transform:scale(0.4) translate(2500px,101px);opacity: 0.9}
+		100% {transform:scale(0.4) translate(-2500px,101px);opacity: 0.2}
+	}
