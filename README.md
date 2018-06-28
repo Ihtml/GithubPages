@@ -1,2 +1,2 @@
 # GithubPages
-Github pages
+Github pages可以托管静态网页
